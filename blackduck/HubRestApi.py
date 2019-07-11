@@ -1293,7 +1293,7 @@ class HubInstance(object):
     ###
     
     def upload_scan(self, filename):
-        url = self.get_apibase() + "/scan/data"
+        url = self.get_apibase() + "/scan/data/"
         files = {'file':open(filename,'rb')}
         response = requests.post(url, headers=self.get_headers(), files=files, verify=False)
         print (response)
